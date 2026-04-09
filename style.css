@@ -1,0 +1,53 @@
+body {
+font-family: Georgia, serif;
+background: white;
+color: #222;
+line-height: 1.7;
+}
+
+.container {
+width: 900px;
+margin: 80px auto;
+}
+
+.site-title {
+text-align: center;
+font-weight: normal;
+margin-bottom: 10px;
+}
+
+.intro {
+text-align: center;
+color: #666;
+margin-bottom: 60px;
+}
+
+.posts {
+text-align: center;
+}
+
+.post-link {
+text-decoration: none;
+color: black;
+font-size: 20px;
+}
+
+.post-link:hover {
+text-decoration: underline;
+}
+
+.post-title {
+font-weight: normal;
+margin-bottom: 30px;
+}
+
+.post-image {
+display: block;
+margin: 40px auto;
+max-width: 100%;
+}
+
+.back {
+text-decoration: none;
+color: #666;
+}

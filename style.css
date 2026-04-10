@@ -96,10 +96,14 @@ body {
 
 img {
     display: block;
-    max-width: 450px; /* This stops the image from becoming giant on laptops */
-    width: 90%;       /* On small phones, it will take up 90% of the screen */
+    max-width: 450px;
+    width: 90%;
+    /* This is the magic part for height */
+    max-height: 400px;  /* Stops them from being too tall */
+    object-fit: cover;  /* This crops the photo so it doesn't look squished */
+    
     height: auto;
-    margin: 30px auto; /* Centered with breathing room */
+    margin: 30px auto; 
     border-radius: 8px;
 }
 

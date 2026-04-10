@@ -1,30 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Warm from the oven</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name | Home</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<div class="container">
+<div class="menu-icon" onclick="toggleMenu()">☰</div>
 
-<a href="index.html" class="back">← home</a>
-
-<h1 class="post-title">Warm from the oven</h1>
-
-<p>
-Your blog text goes here...
-</p>
-
-<img src="muffin.jpg" class="post-image">
-
-<p>
-Continue writing here...
-</p>
-
+<div class="menu" id="menu">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
 </div>
+
+<div class="container">
+    <h1 class="site-title">Your Name</h1>
+    <p class="intro">Notes on baking, books, and things I grow fond of.</p>
+
+    <div class="posts">
+        <div class="post-item">
+            <span class="post-date">April 2026</span>
+            <a href="post1.html" class="post-link">Liebgewinnen</a>
+            <p class="post-excerpt">Growing fond of German mornings and bakery windows.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("menu");
+    menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+}
+</script>
 
 </body>
 </html>

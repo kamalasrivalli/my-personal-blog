@@ -1,10 +1,8 @@
-/* 1. THE BACKGROUND - Adjusted for your face position */
 body {
     background-image: url('images/background.jpg'); 
     background-size: cover;
     background-attachment: fixed;
-    background-position: center 35%; /* Adjust this % to move your face up or down */
-    background-repeat: no-repeat;
+    background-position: center 35%; 
     background-color: #f2eee4; 
     color: #333;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -12,47 +10,73 @@ body {
     text-align: center;
 }
 
-/* 2. THE POST PAGE - Removes the background photo */
-body.white-bg {
-    background-image: none !important;
-    background-color: #f2eee4 !important;
+/* THE HAMBURGER (Restored) */
+.menu-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 1001;
+    background-color: rgba(242, 238, 228, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
-/* 3. THE MENU - Home/About Separation */
+.menu {
+    display: none;
+    position: fixed;
+    top: 65px;
+    right: 20px;
+    background-color: #f2eee4;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    text-align: right;
+    min-width: 120px;
+}
+
+/* FIX: Forces Home and About onto new lines */
 .menu a {
-    display: block !important;
-    margin: 12px 0 !important;
+    display: block !important; 
+    margin: 10px 0;           
     text-decoration: none;
     color: #333;
 }
 
-/* 4. OLIVE BLOCK & ABOUT IMAGE - Keeping them small */
+/* OLIVE BLOCK (Restored size) */
+.post-item {
+    background-color: #8b8c74; 
+    margin: 40px auto;        
+    padding: 30px;            
+    max-width: 450px;         
+    border-radius: 12px;
+}
+
 .post-item img {
-    max-height: 200px !important; 
-    width: auto !important;
-    margin: 0 auto 15px auto;
+    max-height: 250px;        
+    width: 100%;
+    object-fit: cover;        
+    margin-bottom: 15px;
 }
 
-.about-image {
-    width: 220px !important;
-    height: auto !important;
+/* THE MUFFIN FIX: Only targets images with 'post-image' class */
+img.post-image {
     display: block;
-    margin: 0 auto;
-}
-
-/* 5. THE MUFFIN FIX - Only affects images inside the post container */
-/* This makes them wide and short WITHOUT touching your other photos */
-.full-screen-post img, .container p img {
-    display: block;
-    max-width: 700px; 
+    max-width: 650px; 
     width: 95%;
-    height: 350px;     /* The wide cinematic look */
+    height: 350px;     
     object-fit: cover; 
     margin: 35px auto; 
     border-radius: 8px;
 }
 
-/* 6. GENERAL LAYOUT */
+/* ABOUT IMAGE (Restored size) */
+.about-image {
+    width: 220px;
+}
+
 .container {
     max-width: 900px;
     margin: 80px auto;
@@ -61,8 +85,14 @@ body.white-bg {
     border-radius: 15px;
 }
 
-.full-screen-post {
-    background-color: #f2eee4 !important;
-    min-height: 100vh;
-    padding: 60px 10%;
+.site-title {
+    font-weight: 200; 
+    font-size: 3.2rem;
+    margin-top: 80px;
+    letter-spacing: 2px;
+}
+
+/* Removes background on Post Page */
+body.white-bg {
+    background-image: none !important;
 }

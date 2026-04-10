@@ -96,10 +96,11 @@ body {
 
 /* Image styling */
 img {
-    max-width: 100%;
+    display: block;
+    max-width: 70%;    /* This makes them smaller and less "in your face" */
     height: auto;
+    margin: 30px auto; /* This centers them and adds room top and bottom */
     border-radius: 8px;
-    margin-bottom: 25px;
 }
 
 /* Container with slight transparency so background shows through edges */

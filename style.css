@@ -1,9 +1,10 @@
+/* 1. THE BACKGROUND - Adjusted for your face position */
 body {
     background-image: url('images/background.jpg'); 
     background-size: cover;
     background-attachment: fixed;
-    /* This "70%" pushes the photo up so your face is cut off/half-visible as you liked */
-    background-position: center 70%; 
+    background-position: center 35%; /* Adjust this % to move your face up or down */
+    background-repeat: no-repeat;
     background-color: #f2eee4; 
     color: #333;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -11,68 +12,57 @@ body {
     text-align: center;
 }
 
-.site-title {
-    font-weight: 200; 
-    font-size: 3.2rem;
-    margin-top: 80px;
-    letter-spacing: 2px;
-    color: #222;
+/* 2. THE POST PAGE - Removes the background photo */
+body.white-bg {
+    background-image: none !important;
+    background-color: #f2eee4 !important;
 }
 
-/* FIX: Forces menu links to stay on separate lines */
+/* 3. THE MENU - Home/About Separation */
 .menu a {
     display: block !important;
-    margin: 10px 0;
+    margin: 12px 0 !important;
     text-decoration: none;
     color: #333;
 }
 
-/* OLIVE BLOCK PREVIEW IMAGE: Keeps it small and neat */
+/* 4. OLIVE BLOCK & ABOUT IMAGE - Keeping them small */
 .post-item img {
-    max-height: 250px !important; 
-    width: 100% !important;
-    height: auto !important; 
-    object-fit: cover;
-    margin-bottom: 15px;
+    max-height: 200px !important; 
+    width: auto !important;
+    margin: 0 auto 15px auto;
 }
 
-.post-item {
-    background-color: #8b8c74; 
-    margin: 40px auto;        
-    padding: 30px;            
-    max-width: 450px;         
-    border-radius: 12px;
-}
-
-/* ABOUT PAGE IMAGE: Keeps your profile pic small */
 .about-image {
     width: 220px !important;
-    height: auto !important; 
-    border-radius: 8px;
+    height: auto !important;
+    display: block;
+    margin: 0 auto;
 }
 
-/* BLOG POST IMAGES ONLY: This is the rule for the muffins */
-/* Use <img class="post-image"> in your HTML for this to work */
-img.post-image {
+/* 5. THE MUFFIN FIX - Only affects images inside the post container */
+/* This makes them wide and short WITHOUT touching your other photos */
+.full-screen-post img, .container p img {
     display: block;
-    max-width: 650px; 
+    max-width: 700px; 
     width: 95%;
-    height: 350px;     
+    height: 350px;     /* The wide cinematic look */
     object-fit: cover; 
     margin: 35px auto; 
     border-radius: 8px;
 }
 
-/* GENERAL IMAGE RESET: Prevents everything else from being 350px tall */
-img:not(.post-image) {
-    max-width: 100%;
-    height: auto;
-}
-
+/* 6. GENERAL LAYOUT */
 .container {
     max-width: 900px;
     margin: 80px auto;
     padding: 40px 20px;
     background-color: rgba(242, 238, 228, 0.9);
     border-radius: 15px;
+}
+
+.full-screen-post {
+    background-color: #f2eee4 !important;
+    min-height: 100vh;
+    padding: 60px 10%;
 }

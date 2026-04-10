@@ -1,9 +1,8 @@
+/* 1. THE BACKGROUND - Fixed for Mobile */
 body {
-    /* Use your floral background photo */
-    background-image: url('images/background.jpg'); 
+    background-image: url('1000216579.jpg'); 
     background-size: cover;
-    /* 'scroll' is necessary for the image to show up on mobile phones */
-    background-attachment: scroll; 
+    background-attachment: scroll; /* Required for phone browsers */
     background-position: center top;
     background-repeat: no-repeat;
     background-color: #f2eee4; 
@@ -13,23 +12,7 @@ body {
     text-align: center;
 }
 
-/* THIN NAME: High-end look */
-.site-title {
-    font-weight: 200; 
-    font-size: 3.2rem;
-    margin-top: 80px;
-    letter-spacing: 2px;
-    color: #222;
-    text-transform: none; 
-}
-
-.intro {
-    font-style: italic;
-    color: #6d6d6d;
-    margin-bottom: 50px;
-}
-
-/* Fixes the hamburger icon position */
+/* 2. THE MENU - Fixed for Spacing and Overlap */
 .menu-icon {
     position: fixed;
     top: 20px;
@@ -37,108 +20,89 @@ body {
     font-size: 28px;
     cursor: pointer;
     z-index: 1001;
-    background-color: rgba(242, 238, 228, 0.8);
+    background-color: rgba(242, 238, 228, 0.9);
     padding: 5px 10px;
     border-radius: 5px;
 }
 
-/* Fixes the menu box position */
 .menu {
     display: none;
     position: fixed;
-    top: 65px;
+    top: 70px;
     right: 20px;
     background-color: #f2eee4;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     z-index: 1000;
-    text-align: right;
-    min-width: 120px;
+    min-width: 130px;
 }
 
-/* Forces "Home" and "About" onto new lines */
 .menu a {
-    display: block !important; 
-    margin: 10px 0;           
+    display: block !important; /* Forces vertical stack */
+    margin: 12px 0;           /* Space between Home and About */
     text-decoration: none;
     color: #333;
-    font-family: 'Helvetica', Arial, sans-serif;
     font-size: 1.1rem;
+    text-align: right;
 }
 
-/* The Olive Block on the Home Page */
+/* 3. THE OLIVE BLOCK (Home Page) */
 .post-item {
     background-color: #8b8c74; 
     margin: 40px auto;        
-    padding: 30px;            
-    max-width: 450px;         
+    padding: 25px;            
+    max-width: 400px;         
     border-radius: 12px;
-    text-align: center;
 }
 
-/* Image inside the Olive Block */
+/* This is the photo INSIDE the Olive Block */
 .post-item img {
-    max-height: 250px !important; 
     width: 100% !important;
-    height: auto !important; /* Overrides the landscape rule below */
+    height: 200px !important; /* Short and neat for the preview */
     object-fit: cover;
-    margin-bottom: 15px;
     border-radius: 8px;
+    margin-bottom: 15px;
 }
 
-.post-link {
-    font-size: 1.3rem; 
-    font-weight: 300;
-    color: #ffffff;
-    text-decoration: none;
-}
-
-/* NEW RULE: Only for images inside the blog posts */
-/* To use this, add class="post-image" to your <img> tags in post1.html */
+/* 4. THE BLOG POST IMAGES (Muffins, etc.) */
+/* IMPORTANT: Use <img class="post-image" ...> in your HTML */
 img.post-image {
     display: block;
-    max-width: 650px; 
+    max-width: 700px; 
     width: 95%;
-    height: 350px;     
+    height: 350px;     /* Wide and short landscape look */
     object-fit: cover; 
-    object-position: center;
-    margin: 35px auto; 
-    border-radius: 8px;
+    margin: 30px auto; 
+    border-radius: 10px;
 }
 
-/* General image reset so background and icons aren't affected */
-img {
-    max-width: 100%;
-    height: auto;
-}
-
+/* 5. GENERAL LAYOUT */
 .container {
-    max-width: 900px;
-    margin: 80px auto;
+    max-width: 850px;
+    margin: 60px auto;
     padding: 40px 20px;
     background-color: rgba(242, 238, 228, 0.9);
     border-radius: 15px;
 }
 
-/* For your profile photo on About Page */
+.site-title {
+    font-weight: 200; 
+    font-size: 3rem;
+    margin-top: 60px;
+    letter-spacing: 2px;
+}
+
+/* 6. PROFILE PIC (About Page) */
 .about-image {
     width: 220px !important;
-    height: auto !important;
-    border-radius: 8px;
+    height: auto !important; /* Keeps it from being squashed */
+    border-radius: 10px;
 }
 
-/* Hides background on specific post pages if needed */
-body.white-bg {
-    background-image: none !important;
-    background-color: #f2eee4 !important;
-}
-
+/* 7. FULL SCREEN POSTS */
 .full-screen-post {
     background-color: #f2eee4 !important;
     min-height: 100vh;
-    margin: 0 auto !important;
-    max-width: 100% !important;
-    padding: 80px 10% !important;
-    border-radius: 0 !important;
+    padding: 60px 10%;
 }

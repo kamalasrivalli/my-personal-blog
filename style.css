@@ -115,3 +115,20 @@ img {
 .about-image {
     width: 220px;
 }
+/* --- Add this at the very bottom --- */
+
+/* This hides the cherry blossom photo only on the post page */
+body.white-bg {
+    background-image: none !important;
+    background-color: #f2eee4 !important;
+}
+
+/* This makes the linen color stretch to the edges of the screen */
+.full-screen-post {
+    background-color: #f2eee4 !important;
+    min-height: 100vh;
+    margin: 0 auto !important;
+    max-width: 100% !important; /* Fills the width */
+    padding: 80px 10% !important; /* Keeps text in the middle with 10% side space */
+    border-radius: 0 !important; /* Removes rounded corners for full-screen look */
+}

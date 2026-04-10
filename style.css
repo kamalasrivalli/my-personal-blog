@@ -65,24 +65,29 @@ body {
     text-align: right;   
 }
 
-/* THE POST BLOCK: Muted Dusty Olive */
+/* This controls the Olive Block size */
 .post-item {
     background-color: #8b8c74; 
-    margin: 20px auto;
-    padding: 60px 30px;
-    max-width: 600px;
+    margin: 40px auto;        /* Adds space between blocks */
+    padding: 30px;            /* Reduced padding from 60px to 30px */
+    max-width: 450px;         /* Made the block narrower (was 600px) */
     border-radius: 12px;
-    transition: transform 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: center;
+}
+
+/* This keeps the image inside the block small and neat */
+.post-item img {
+    max-height: 250px;        /* Limits how tall the photo can be */
+    width: 100%;
+    object-fit: cover;        /* Crops the photo nicely to fit the space */
+    margin-bottom: 15px;
 }
 
 .post-link {
-    text-decoration: none;
-    color: #ffffff; 
-    font-size: 1.6rem;
-    line-height: 1.4;
+    font-size: 1.3rem;        /* Slightly smaller text to match the smaller block */
     font-weight: 300;
-    display: block;
+    color: #ffffff;
+    text-decoration: none;
 }
 
 .post-item:hover {

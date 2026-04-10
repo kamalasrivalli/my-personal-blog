@@ -1,66 +1,39 @@
 body {
-    /* FIX: Make sure this path is exactly where your image is */
-    background-image: url('images/background.jpg'); 
+    background-image: url('1000216579.jpg'); 
     background-size: cover;
-    background-attachment: scroll; 
-    background-position: center center;
-    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* This "70%" pushes the photo up so your face is cut off/half-visible as you liked */
+    background-position: center 70%; 
     background-color: #f2eee4; 
     color: #333;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin: 0;
     text-align: center;
-    min-height: 100vh;
 }
 
 .site-title {
     font-weight: 200; 
     font-size: 3.2rem;
-    padding-top: 80px; /* Using padding keeps the background at the very top */
-    margin: 0;
+    margin-top: 80px;
     letter-spacing: 2px;
     color: #222;
 }
 
-.intro {
-    font-style: italic;
-    color: #6d6d6d;
-    margin-bottom: 50px;
-}
-
-.menu-icon {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    font-size: 28px;
-    cursor: pointer;
-    z-index: 1001;
-    background-color: rgba(242, 238, 228, 0.8);
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-.menu {
-    display: none;
-    position: fixed;
-    top: 65px;
-    right: 20px;
-    background-color: #f2eee4;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    z-index: 1000;
-    text-align: right;
-    min-width: 120px;
-}
-
-/* THE HOME/ABOUT FIX */
+/* FIX: Forces menu links to stay on separate lines */
 .menu a {
-    display: block !important; 
-    margin: 10px 0;           
+    display: block !important;
+    margin: 10px 0;
     text-decoration: none;
     color: #333;
-    font-family: 'Helvetica', Arial, sans-serif;
+}
+
+/* OLIVE BLOCK PREVIEW IMAGE: Keeps it small and neat */
+.post-item img {
+    max-height: 250px !important; 
+    width: 100% !important;
+    height: auto !important; 
+    object-fit: cover;
+    margin-bottom: 15px;
 }
 
 .post-item {
@@ -71,7 +44,15 @@ body {
     border-radius: 12px;
 }
 
-/* This handles the muffin photos in the blog post */
+/* ABOUT PAGE IMAGE: Keeps your profile pic small */
+.about-image {
+    width: 220px !important;
+    height: auto !important; 
+    border-radius: 8px;
+}
+
+/* BLOG POST IMAGES ONLY: This is the rule for the muffins */
+/* Use <img class="post-image"> in your HTML for this to work */
 img.post-image {
     display: block;
     max-width: 650px; 
@@ -82,15 +63,15 @@ img.post-image {
     border-radius: 8px;
 }
 
-/* General reset for other images */
-img {
+/* GENERAL IMAGE RESET: Prevents everything else from being 350px tall */
+img:not(.post-image) {
     max-width: 100%;
     height: auto;
 }
 
 .container {
     max-width: 900px;
-    margin: 40px auto;
+    margin: 80px auto;
     padding: 40px 20px;
     background-color: rgba(242, 238, 228, 0.9);
     border-radius: 15px;

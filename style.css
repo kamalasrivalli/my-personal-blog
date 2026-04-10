@@ -1,37 +1,97 @@
 body {
-    /* Use the flower shop image */
+    /* FIX: Make sure this path is exactly where your image is */
     background-image: url('images/background.jpg'); 
     background-size: cover;
     background-attachment: scroll; 
-    background-position: center center; /* This centers the photo properly */
+    background-position: center center;
     background-repeat: no-repeat;
     background-color: #f2eee4; 
     color: #333;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin: 0;
-    padding: 0;
     text-align: center;
-    /* This removes the black bar at the top */
     min-height: 100vh;
 }
 
 .site-title {
     font-weight: 200; 
     font-size: 3.2rem;
-    /* Change margin-top to padding-top to keep the background at the top */
-    padding-top: 100px; 
+    padding-top: 80px; /* Using padding keeps the background at the very top */
     margin: 0;
     letter-spacing: 2px;
     color: #222;
 }
 
-/* Forces Home and About to stay on separate lines */
+.intro {
+    font-style: italic;
+    color: #6d6d6d;
+    margin-bottom: 50px;
+}
+
+.menu-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 1001;
+    background-color: rgba(242, 238, 228, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.menu {
+    display: none;
+    position: fixed;
+    top: 65px;
+    right: 20px;
+    background-color: #f2eee4;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+    text-align: right;
+    min-width: 120px;
+}
+
+/* THE HOME/ABOUT FIX */
 .menu a {
     display: block !important; 
-    margin: 15px 0 !important; 
+    margin: 10px 0;           
     text-decoration: none;
     color: #333;
     font-family: 'Helvetica', Arial, sans-serif;
-    font-size: 1.2rem;
-    text-align: right;
+}
+
+.post-item {
+    background-color: #8b8c74; 
+    margin: 40px auto;        
+    padding: 30px;            
+    max-width: 450px;         
+    border-radius: 12px;
+}
+
+/* This handles the muffin photos in the blog post */
+img.post-image {
+    display: block;
+    max-width: 650px; 
+    width: 95%;
+    height: 350px;     
+    object-fit: cover; 
+    margin: 35px auto; 
+    border-radius: 8px;
+}
+
+/* General reset for other images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 40px 20px;
+    background-color: rgba(242, 238, 228, 0.9);
+    border-radius: 15px;
 }

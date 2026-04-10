@@ -1,137 +1,104 @@
-/* Import a Bold, Modern Serif for titles and a clean Sans for body */
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500&display=swap');
+/* Import a cleaner, more elegant Serif and a light Sans font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400&display=swap');
 
 body {
-    background-color: #ffffff; /* Pure White background */
-    color: #000000; /* Pure Black text */
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
+    background-color: #faf9f6; /* Off-white/Cream background */
+    color: #1a1a1a; /* Soft black text */
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 1.7;
     margin: 0;
     padding: 0;
 }
 
 .container {
-    max-width: 800px;
-    margin: 80px auto;
+    max-width: 850px;
+    margin: 60px auto;
     padding: 20px;
 }
 
-/* Menu Icon - Simple and Black */
-.menu-icon {
-    position: fixed;
-    top: 30px;
-    right: 30px;
-    cursor: pointer;
-    font-size: 28px;
-    color: #000;
-    z-index: 1000;
-}
-
-.menu {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: #fff;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 999;
-}
-
-.menu a {
-    font-family: 'DM Serif Display', serif;
-    font-size: 3rem;
-    text-decoration: none;
-    color: #000;
-    margin: 15px;
-}
-
-/* Site Titles */
+/* Site Title - Elegant and Light (Not thick/bold) */
 .site-title {
-    font-family: 'DM Serif Display', serif;
-    font-size: 4.5rem; /* Big and Bold like your image */
-    color: #000;
-    margin-bottom: 0;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400; /* Makes it thinner */
+    font-size: 3.5rem;
     text-align: center;
+    color: #4a4a4a;
+    letter-spacing: -1px;
+    margin-bottom: 10px;
 }
 
 .intro {
     text-align: center;
-    font-size: 1rem;
-    text-transform: uppercase;
+    font-size: 0.9rem;
     letter-spacing: 2px;
-    color: #666;
-    margin-bottom: 80px;
+    text-transform: uppercase;
+    color: #9b89b3; /* Soft Lavender from your image */
+    margin-bottom: 60px;
 }
 
-/* The Grid (The "Canva" Layout) */
+/* The Grid Layout */
 .posts {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
 }
 
-/* Post Cards - Simple black outlines instead of heavy colors */
+/* Post Cards - Inspired by your Canva Image */
 .post-item {
-    border: 2px solid #000; /* The rounded box look, but in black/white */
-    padding: 50px 30px;
-    border-radius: 24px;
+    background: #ffffff;
+    border: 1px solid #eee;
+    padding: 40px 20px;
+    border-radius: 30px; /* Rounded corners from image */
     text-align: center;
-    transition: all 0.3s ease;
-    background: #fff;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    /* Border color inspired by the Ochre in your image */
+    border-bottom: 5px solid #b38b4d; 
 }
 
+/* Gentle Hover Effect (No more turning black) */
 .post-item:hover {
-    background: #000; /* Inverts on hover - very cool effect */
-}
-
-.post-item:hover .post-link {
-    color: #fff;
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    background-color: #fffaf2; /* Slight warm glow */
 }
 
 .post-link {
-    font-family: 'DM Serif Display', serif;
-    font-size: 2rem;
-    color: #000;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #cc5a3d; /* Terracotta from your image */
     text-decoration: none;
 }
 
-/* Inside the Post Styles */
-.post-header {
-    text-align: left;
-    margin-bottom: 40px;
-}
-
-.post-title {
-    font-family: 'DM Serif Display', serif;
-    font-size: 3rem;
-}
-
+/* Inside the Post Content */
 .post-body {
-    font-size: 1.1rem;
-    text-align: left;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
 }
 
-/* Recipe Card - Like a clean label */
+.post-body p {
+    font-size: 1.15rem;
+    color: #333; /* Deep black-grey for reading */
+}
+
+/* Recipe Card - Lavender/Sage theme */
 .recipe-card {
-    border: 2px solid #000;
-    border-radius: 20px;
+    background-color: #f7f3f9; /* Light lavender tint */
+    border-radius: 25px;
     padding: 40px;
-    margin-top: 60px;
-    background: #f9f9f9;
+    margin-top: 50px;
+    border-left: 8px solid #9b89b3;
 }
 
 .recipe-card h3 {
-    font-family: 'DM Serif Display', serif;
-    font-size: 2rem;
-    margin-top: 0;
+    font-family: 'Playfair Display', serif;
+    color: #9b89b3;
 }
 
-/* Mobile */
+/* Mobile Adjustments */
 @media (max-width: 600px) {
-    .site-title { font-size: 3rem; }
-    .container { margin: 40px 20px; }
+    .site-title { font-size: 2.5rem; }
+    .container { margin-top: 30px; }
 }

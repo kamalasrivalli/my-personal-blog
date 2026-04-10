@@ -1,120 +1,47 @@
-/* Using 'Inter' for that clean, modern look you liked */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Quicksand:wght@500&display=swap');
 
 body {
-    background-color: #ffffff;
-    color: #1a1a1a;
-    font-family: 'Inter', sans-serif;
+    background-color: #f4edd3; /* The cream background from your photo */
+    font-family: 'Quicksand', sans-serif;
     margin: 0;
-    padding: 0;
 }
 
 .container {
-    max-width: 800px;
-    margin: 100px auto;
-    padding: 0 20px;
+    max-width: 900px;
+    margin: 60px auto;
+    text-align: center;
 }
 
-/* Your Name - Thin, clean, and spaced out (Keeping what you liked!) */
 .site-title {
-    font-weight: 300;
-    font-size: 2.5rem;
-    text-align: center;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    margin-bottom: 10px;
-    color: #000;
+    font-family: 'Abril Fatface', serif;
+    font-size: 4rem;
+    color: #cc5a3d;
+    margin-bottom: 40px;
 }
 
-.intro {
-    text-align: center;
-    font-size: 0.8rem;
-    letter-spacing: 2px;
-    color: #999;
-    margin-bottom: 80px;
-}
-
-/* The Grid for your Posts */
 .posts {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px;
 }
 
-/* Post Box - Using Pastel Shades */
 .post-item {
-    background-color: #f0f4f0; /* Default Soft Sage */
     padding: 60px 20px;
-    border-radius: 24px; /* Soft rounded corners from your image */
-    text-align: center;
-    transition: all 0.3s ease;
-    border: none;
+    border-radius: 40px; /* Big, friendly rounded corners */
+    transition: 0.3s transform ease;
 }
 
-/* Giving each box a different pastel shade like your Canva image */
-.post-item:nth-child(1) { background-color: #f2eefb; } /* Soft Lavender */
-.post-item:nth-child(2) { background-color: #fff0e6; } /* Pale Peach/Terracotta */
-.post-item:nth-child(3) { background-color: #f0f7f4; } /* Mint Sage */
+.post-item:hover { transform: scale(1.02); }
 
-/* Hover effect - grows slightly and brightens */
-.post-item:hover {
-    transform: scale(1.02);
-    filter: brightness(0.98);
-}
+/* Card Colors from your Canva image */
+.terracotta { background-color: #cc5a3d; }
+.lavender { background-color: #9b89b3; }
+.ochre { background-color: #b38b4d; }
 
 .post-link {
-    font-weight: 600;
-    font-size: 1.3rem;
-    color: #333; /* Dark font for readability */
-    text-decoration: none;
-    letter-spacing: 0.5px;
-}
-
-/* Recipe Card Styling - Inside the post */
-.recipe-card {
-    background-color: #fffbf0; /* Soft Butter Cream */
-    border-radius: 20px;
-    padding: 40px;
-    margin-top: 60px;
-    color: #333;
-    border: 1px dashed #e0d0b0;
-}
-
-.recipe-card h3 {
-    margin-top: 0;
-    color: #b38b4d;
-}
-
-/* Menu styling */
-.menu-icon {
-    position: fixed;
-    top: 35px;
-    right: 35px;
-    font-size: 24px;
-    cursor: pointer;
-    color: #000;
-}
-
-.menu {
-    display: none;
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100vh;
-    background: rgba(255,255,255,0.98);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
-}
-
-.menu a {
+    font-family: 'Abril Fatface', serif;
     font-size: 2rem;
-    color: black;
+    color: white;
     text-decoration: none;
-    margin: 15px;
-    font-weight: 300;
-}
-
-@media (max-width: 600px) {
-    .site-title { font-size: 1.8rem; }
-    .container { margin: 60px auto; }
 }

@@ -3,7 +3,7 @@ body {
     background-image: url('images/background.jpg'); 
     background-size: cover;
     background-attachment: fixed;
-    background-position: center 65%;
+    background-position: center 25%;
     background-color: #f2eee4; 
     color: #333;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -55,14 +55,15 @@ body {
     min-width: 120px;
 }
 
-/* FIX: This stops "Home" and "About" from smashing together */
 .menu a {
-    display: block !important; /* Forces them onto new lines */
-    margin: 10px 0;           /* Adds space between the links */
+    display: block !important; /* Forces each link onto a new line */
+    padding: 10px 0;           /* Adds space above and below the text */
+    margin: 5px 0;             /* Adds extra gap between the links */
     text-decoration: none;
     color: #333;
     font-family: 'Helvetica', Arial, sans-serif;
     font-size: 1.1rem;
+    text-align: right;         /* Keeps them aligned to the right edge */
 }
 
 /* This controls the Olive Block size */

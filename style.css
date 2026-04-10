@@ -1,46 +1,37 @@
 body {
-    background-color: #ffffff; /* Pure white background */
-    color: #333333; /* Clean black text */
-    font-family: 'Helvetica', 'Arial', sans-serif;
+    background-color: #ffffff; /* White background as requested */
+    color: #333;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin: 0;
-    padding: 0;
-}
-
-.container {
-    max-width: 800px;
-    margin: 80px auto;
-    padding: 20px;
     text-align: center;
 }
 
-/* THE NAME - Thin and Elegant (Not bold/thick) */
+/* FIXING YOUR NAME: Thin and light, not bold */
 .site-title {
-    font-weight: 200; /* Very thin */
+    font-weight: 200; 
     font-size: 3rem;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-    color: #000;
+    margin-top: 80px;
+    letter-spacing: 1px;
 }
 
 .intro {
     font-style: italic;
-    color: #777;
-    margin-bottom: 60px;
+    color: #888;
+    margin-bottom: 50px;
 }
 
-/* THE MENU - Simple Orange Icon */
+/* THE MENU */
 .menu-icon {
     position: fixed;
-    top: 25px;
-    right: 25px;
-    cursor: pointer;
+    top: 20px;
+    right: 20px;
     font-size: 30px;
-    color: #ffb347; /* Pastel Orange icon */
+    cursor: pointer;
     z-index: 1000;
 }
 
 .menu {
-    display: none; 
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -55,27 +46,24 @@ body {
 
 .menu a {
     font-size: 2rem;
-    color: #333;
     text-decoration: none;
+    color: #333;
     margin: 15px;
 }
 
-/* THE PASTEL BLOCK - For your posts */
+/* THE PASTEL BLOCKS */
 .post-item {
-    background-color: #fdf2f2; /* Pastel Pink/Cream block */
-    padding: 40px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-}
-
-/* Different pastel for the next block */
-.post-item:nth-child(even) {
-    background-color: #f0f4f8; /* Pastel Blue/Grey block */
+    background-color: #fce4ec; /* Light Pastel Pink/Peach */
+    margin: 20px auto;
+    padding: 50px 20px;
+    max-width: 500px;
+    border-radius: 15px; /* Rounded like your photo */
 }
 
 .post-link {
-    font-size: 1.8rem;
-    color: #333;
     text-decoration: none;
-    font-weight: 400;
+    color: #333;
+    font-size: 1.5rem;
+    line-height: 1.4; /* Adds a little space between the lines of the title */
+    display: block;   /* Makes the whole pastel block clickable */
 }

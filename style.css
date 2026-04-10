@@ -40,9 +40,9 @@ body {
     border-radius: 5px;
 }
 
-/* Fixes the menu box position */
+  /* Fixes the menu box container */
 .menu {
-    display: none;
+    display: none; /* Hidden until you click the hamburger */
     position: fixed;
     top: 65px;
     right: 20px;
@@ -51,19 +51,22 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     z-index: 1000;
-    text-align: right;
-    min-width: 120px;
+    
+    /* ADD THESE TWO LINES: They force a vertical stack */
+    flex-direction: column !important; 
+    display: none; /* Keep this as 'none', your JavaScript handles the 'flex' toggle */
 }
 
+/* FIX: This forces the links to be on separate lines */
 .menu a {
-    display: block !important; /* Forces each link onto a new line */
-    padding: 10px 0;           /* Adds space above and below the text */
-    margin: 5px 0;             /* Adds extra gap between the links */
+    display: block !important; /* Makes the link take up the whole width */
+    width: 100%;               /* Ensures it pushes the next link down */
+    margin: 15px 0 !important; /* Adds clear vertical space between them */
     text-decoration: none;
     color: #333;
     font-family: 'Helvetica', Arial, sans-serif;
-    font-size: 1.1rem;
-    text-align: right;         /* Keeps them aligned to the right edge */
+    font-size: 1.2rem;
+    text-align: right;         /* Keeps the text aligned to the right */
 }
 
 /* This controls the Olive Block size */

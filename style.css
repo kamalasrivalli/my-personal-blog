@@ -96,14 +96,16 @@ body {
 
 img {
     display: block;
-    max-width: 450px;
-    width: 90%;
-    /* This is the magic part for height */
-    max-height: 400px;  /* Stops them from being too tall */
-    object-fit: cover;  /* This crops the photo so it doesn't look squished */
+    /* This makes them wider on laptops */
+    max-width: 650px; 
+    width: 95%;
     
-    height: auto;
-    margin: 30px auto; 
+    /* This forces a wider, shorter "Landscape" shape */
+    height: 350px;     
+    object-fit: cover; 
+    object-position: center; /* Ensures the middle of the photo stays visible */
+    
+    margin: 35px auto; 
     border-radius: 8px;
 }
 

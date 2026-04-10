@@ -1,5 +1,9 @@
 body {
-    /* This is a deeper off-white/linen color so it doesn't look white */
+    /* Added your sky photo here */
+    background-image: url('images/background.jpg'); 
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
     background-color: #f2eee4; 
     color: #333;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -14,7 +18,6 @@ body {
     margin-top: 80px;
     letter-spacing: 2px;
     color: #222;
-    /* Extra subtle touch: adding a tiny bit of space between letters */
     text-transform: none; 
 }
 
@@ -32,31 +35,36 @@ body {
     font-size: 30px;
     cursor: pointer;
     z-index: 1001;
+    /* Added background so it's visible over the tree photo */
+    background: rgba(242, 238, 228, 0.8);
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
-/* THE MENU - Positioned to the right, below the icon */
+/* THE MENU */
 .menu {
-    display: none; /* Starts hidden */
+    display: none; 
     position: fixed;
-    top: 60px;     /* Places it below the ☰ icon */
-    right: 20px;   /* Aligns it to the right side */
-    background-color: #f2eee4; /* Your Linen/Off-white */
+    top: 70px;     
+    right: 20px;   
+    background-color: #f2eee4; 
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Subtle shadow */
-    text-align: right; /* Keeps text aligned under the icon */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+    text-align: right; 
     z-index: 1000;
 }
 
 .menu a {
-    display: block;      /* This stacks them vertically */
-    margin: 15px 0;      /* This creates the gap between Home and About */
-    color: #333;         
+    display: block;      
+    margin: 15px 0;      
+    color: #333;          
     text-decoration: none;
     font-size: 1.4rem;   
     font-weight: 200;    
     text-align: right;   
 }
+
 /* THE POST BLOCK: Muted Dusty Olive */
 .post-item {
     background-color: #8b8c74; 
@@ -65,7 +73,6 @@ body {
     max-width: 600px;
     border-radius: 12px;
     transition: transform 0.3s ease;
-    /* Adding a very soft shadow to make it pop from the background */
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
@@ -89,18 +96,22 @@ img {
     border-radius: 8px;
     margin-bottom: 25px;
 }
+
+/* Container with slight transparency so background shows through edges */
 .container {
-max-width: 900px;
-margin: 80px auto;
-padding: 0 20px;
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 40px 20px;
+    background-color: rgba(242, 238, 228, 0.9);
+    border-radius: 15px;
 }
 
 .about-container {
-display: flex;
-gap: 40px;
-align-items: flex-start;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
 }
 
 .about-image {
-width: 220px;
+    width: 220px;
 }

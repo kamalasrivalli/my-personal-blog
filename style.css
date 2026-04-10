@@ -1,6 +1,6 @@
 /* 1. THE BACKGROUND - Fixed for Mobile */
 body {
-    background-image: url('1000216579.jpg'); 
+    background-image: url('images/background.jpg'); 
     background-size: cover;
     background-attachment: scroll; /* Required for phone browsers */
     background-position: center top;

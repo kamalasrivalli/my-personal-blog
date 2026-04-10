@@ -27,42 +27,42 @@ body {
     margin-bottom: 50px;
 }
 
-/* THE ICON */
+/* Fixes the hamburger icon position so it doesn't overlap text */
 .menu-icon {
     position: fixed;
     top: 20px;
     right: 20px;
-    font-size: 30px;
+    font-size: 28px;
     cursor: pointer;
     z-index: 1001;
-    /* Added background so it's visible over the tree photo */
-    background: rgba(242, 238, 228, 0.8);
+    background-color: rgba(242, 238, 228, 0.8); /* Matches your linen color */
     padding: 5px 10px;
     border-radius: 5px;
 }
 
-/* THE MENU */
+/* Fixes the menu box position */
 .menu {
-    display: none; 
+    display: none;
     position: fixed;
-    top: 70px;     
-    right: 20px;   
-    background-color: #f2eee4; 
-    padding: 20px;
+    top: 65px;
+    right: 20px;
+    background-color: #f2eee4;
+    padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
-    text-align: right; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     z-index: 1000;
+    text-align: right;
+    min-width: 120px;
 }
 
+/* FIX: This stops "Home" and "About" from smashing together */
 .menu a {
-    display: block;      
-    margin: 15px 0;      
-    color: #333;          
+    display: block !important; /* Forces them onto new lines */
+    margin: 10px 0;           /* Adds space between the links */
     text-decoration: none;
-    font-size: 1.4rem;   
-    font-weight: 200;    
-    text-align: right;   
+    color: #333;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 1.1rem;
 }
 
 /* This controls the Olive Block size */

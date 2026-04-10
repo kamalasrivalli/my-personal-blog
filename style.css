@@ -67,3 +67,18 @@ img {
     border-radius: 8px;
     margin-bottom: 25px;
 }
+.container {
+max-width: 900px;
+margin: 80px auto;
+padding: 0 20px;
+}
+
+.about-container {
+display: flex;
+gap: 40px;
+align-items: flex-start;
+}
+
+.about-image {
+width: 220px;
+}

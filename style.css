@@ -1,47 +1,100 @@
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Quicksand:wght@500&display=swap');
+/* Import Sophisticated Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&family=Mrs+Saint+Delafield&family=Montserrat:wght@300;400&display=swap');
 
 body {
-    background-color: #f4edd3; /* The cream background from your photo */
-    font-family: 'Quicksand', sans-serif;
+    background-color: #fcfaf8; /* Soft warm white */
+    color: #444;
+    font-family: 'Cormorant Garamond', serif;
     margin: 0;
+    padding: 0;
 }
 
-.container {
-    max-width: 900px;
-    margin: 60px auto;
+/* Header / Logo Section */
+header {
     text-align: center;
+    padding: 60px 20px;
 }
 
 .site-title {
-    font-family: 'Abril Fatface', serif;
-    font-size: 4rem;
-    color: #cc5a3d;
-    margin-bottom: 40px;
+    font-family: 'Mrs Saint Delafield', cursive; /* Script font for the name */
+    font-size: 5rem;
+    color: #222;
+    margin: 0;
+    font-weight: normal;
 }
 
-.posts {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    text-decoration: none;
+    color: #888;
+    margin: 0 15px;
+}
+
+/* Hero Section (The big wedding-style photo area) */
+.hero {
+    width: 100%;
+    height: 600px;
+    background: url('your-muffin-image.jpg') center/cover no-repeat;
+    margin-bottom: 80px;
+}
+
+/* Content Container */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
     padding: 20px;
 }
 
-.post-item {
-    padding: 60px 20px;
-    border-radius: 40px; /* Big, friendly rounded corners */
-    transition: 0.3s transform ease;
+/* Welcome Section - Like the middle of your image */
+.welcome-section {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 100px;
 }
 
-.post-item:hover { transform: scale(1.02); }
+.welcome-image {
+    flex: 1;
+    border-radius: 0; /* Square edges look more editorial */
+}
 
-/* Card Colors from your Canva image */
-.terracotta { background-color: #cc5a3d; }
-.lavender { background-color: #9b89b3; }
-.ochre { background-color: #b38b4d; }
+.welcome-text {
+    flex: 1;
+    text-align: left;
+}
 
-.post-link {
-    font-family: 'Abril Fatface', serif;
-    font-size: 2rem;
+.welcome-text h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: 300;
+}
+
+/* Post Cards / Gallery Section */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.gallery-item {
+    aspect-ratio: 3/4;
+    background-color: #eee;
+    background-size: cover;
+}
+
+.gallery-label {
+    background: #d4c7b8; /* Beige bar at the bottom */
     color: white;
-    text-decoration: none;
+    text-align: center;
+    padding: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 2px;
 }

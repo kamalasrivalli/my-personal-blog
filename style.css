@@ -1,27 +1,31 @@
 body {
-    /* Updated to the flower shop photo you sent */
+    /* Use the flower shop image */
     background-image: url('images/background.jpg'); 
     background-size: cover;
-    background-attachment: scroll; /* Makes it show up on phones */
-    background-position: center 20%; /* Moves the photo slightly so your face/flowers are seen */
+    background-attachment: scroll; 
+    background-position: center center; /* This centers the photo properly */
     background-repeat: no-repeat;
     background-color: #f2eee4; 
     color: #333;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin: 0;
+    padding: 0;
     text-align: center;
+    /* This removes the black bar at the top */
+    min-height: 100vh;
 }
 
-/* FIX: Moves the text down so it doesn't hide your face in the photo */
 .site-title {
     font-weight: 200; 
     font-size: 3.2rem;
-    margin-top: 150px; /* Pushes the name down */
+    /* Change margin-top to padding-top to keep the background at the top */
+    padding-top: 100px; 
+    margin: 0;
     letter-spacing: 2px;
     color: #222;
 }
 
-/* FIX: Forces Home and About onto separate lines */
+/* Forces Home and About to stay on separate lines */
 .menu a {
     display: block !important; 
     margin: 15px 0 !important; 
@@ -30,53 +34,4 @@ body {
     font-family: 'Helvetica', Arial, sans-serif;
     font-size: 1.2rem;
     text-align: right;
-}
-
-/* FIX: Ensures the menu icon is visible but not in the way */
-.menu-icon {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    font-size: 30px;
-    cursor: pointer;
-    z-index: 1001;
-    background-color: rgba(242, 238, 228, 0.7);
-    padding: 5px 10px;
-    border-radius: 5px;
-}
-
-/* KEEPING THE OLIVE BLOCK AND POST IMAGES AS WE DISCUSSED */
-.post-item {
-    background-color: #8b8c74; 
-    margin: 40px auto;        
-    padding: 30px;            
-    max-width: 450px;         
-    border-radius: 12px;
-}
-
-/* This is for the photo inside the Olive block */
-.post-item img {
-    max-height: 250px;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 8px;
-}
-
-/* This is for your muffin photos in the post */
-img.post-image {
-    display: block;
-    max-width: 650px; 
-    width: 95%;
-    height: 350px;    
-    object-fit: cover; 
-    margin: 35px auto; 
-    border-radius: 8px;
-}
-
-.container {
-    max-width: 900px;
-    margin: 80px auto;
-    padding: 40px 20px;
-    background-color: rgba(242, 238, 228, 0.9);
-    border-radius: 15px;
 }

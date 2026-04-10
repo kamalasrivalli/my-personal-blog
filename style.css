@@ -94,12 +94,12 @@ body {
     transform: translateY(-3px);
 }
 
-/* Image styling */
 img {
     display: block;
-    max-width: 70%;    /* This makes them smaller and less "in your face" */
+    max-width: 450px; /* This stops the image from becoming giant on laptops */
+    width: 90%;       /* On small phones, it will take up 90% of the screen */
     height: auto;
-    margin: 30px auto; /* This centers them and adds room top and bottom */
+    margin: 30px auto; /* Centered with breathing room */
     border-radius: 8px;
 }
 

@@ -1,23 +1,26 @@
 body {
-    background-color: #f9f7f2; /* Off-white/Cream background */
+    /* This is a deeper off-white/linen color so it doesn't look white */
+    background-color: #f2eee4; 
     color: #333;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin: 0;
     text-align: center;
 }
 
-/* THIN NAME: Elegant and light weight */
+/* THIN NAME: High-end look */
 .site-title {
     font-weight: 200; 
     font-size: 3.2rem;
     margin-top: 80px;
     letter-spacing: 2px;
     color: #222;
+    /* Extra subtle touch: adding a tiny bit of space between letters */
+    text-transform: none; 
 }
 
 .intro {
     font-style: italic;
-    color: #777;
+    color: #6d6d6d;
     margin-bottom: 50px;
 }
 
@@ -29,26 +32,24 @@ body {
     font-size: 30px;
     cursor: pointer;
     z-index: 1000;
-    color: #333;
+    color: #444; 
 }
 
-/* THE POST BLOCK: Snuff/Dusty Pink color */
+/* THE POST BLOCK: Muted Dusty Olive */
 .post-item {
-    background-color: #b1908d; /* "Snuff" - a dark, earthy dusty pink */
+    background-color: #8b8c74; 
     margin: 20px auto;
     padding: 60px 30px;
     max-width: 600px;
     border-radius: 12px;
     transition: transform 0.3s ease;
+    /* Adding a very soft shadow to make it pop from the background */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
-
-/* If you prefer Olive, comment out the line above and use this instead:
-   background-color: #8b8c74; 
-*/
 
 .post-link {
     text-decoration: none;
-    color: #ffffff; /* White text looks better on the darker block */
+    color: #ffffff; 
     font-size: 1.6rem;
     line-height: 1.4;
     font-weight: 300;
@@ -56,5 +57,13 @@ body {
 }
 
 .post-item:hover {
-    transform: scale(1.01); /* Subtle lift when hovering */
+    transform: translateY(-3px);
+}
+
+/* Image styling */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 25px;
 }

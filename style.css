@@ -2,64 +2,112 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
 
 body {
-    background-color: #faf7f2; /* Warm parchment */
-    color: #3d3a37; /* Soft dark brown */
-    font-family: 'Lora', serif; /* Book-style font */
+    background-color: #1a1a1a; /* Dark charcoal */
+    color: #d1cdc7; /* Soft parchment-grey text */
+    font-family: 'Lora', serif;
     line-height: 1.8;
     margin: 0;
     padding: 0;
 }
 
 .container {
-    max-width: 700px; /* Narrower for better reading */
+    max-width: 650px;
     margin: 100px auto;
-    padding: 20px;
-    background: white; /* Card effect */
-    box-shadow: 0 10px 30px rgba(0,0,0,0.03); /* Very subtle shadow */
-    border-radius: 12px;
+    padding: 40px;
+    background: #242424; /* Slightly lighter dark grey */
+    border-radius: 8px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
 }
 
+/* Menu Styling - Fixed for your toggle function */
+.menu-icon {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
+    font-size: 32px;
+    color: #8c7b6c; /* Muted bronze */
+    z-index: 1000;
+}
+
+.menu {
+    display: none; /* Controlled by your JS toggleMenu() */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(26, 26, 26, 0.98);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.menu a {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    text-decoration: none;
+    color: #8c7b6c;
+    margin: 20px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #d1cdc7;
+}
+
+/* Typography */
 .site-title {
     font-family: 'Playfair Display', serif;
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 3.5rem;
     text-align: center;
-    color: #2a2724;
+    color: #e5e0d8;
+    margin-bottom: 0;
 }
 
 .intro {
     text-align: center;
     font-style: italic;
-    color: #8c7b6c;
-    margin-bottom: 50px;
-}
-
-/* Post List Styling */
-.posts {
-    border-top: 1px solid #efeae4;
-    padding-top: 30px;
+    color: #6e665d;
+    margin-bottom: 60px;
 }
 
 .post-link {
     font-family: 'Playfair Display', serif;
-    font-size: 1.8rem;
-    color: #a67c52; /* Cinnamon Brown */
+    font-size: 2rem;
+    color: #8c7b6c;
     text-decoration: none;
-    transition: color 0.3s ease;
-    display: block;
+    border-bottom: 1px solid transparent;
+    transition: 0.4s;
 }
 
 .post-link:hover {
-    color: #5d4037;
+    color: #e5e0d8;
+    border-bottom: 1px solid #8c7b6c;
 }
 
-/* Menu Customization */
-.menu-icon {
-    color: #a67c52;
-    font-size: 30px;
+/* Recipe Card - Moody Edition */
+.recipe-card {
+    background-color: #2a2a2a;
+    border: 1px solid #333;
+    border-left: 4px solid #8c7b6c;
+    padding: 30px;
+    margin-top: 50px;
 }
 
-.menu a {
-    font-family: 'Playfair Display', serif;
-    color: #a67c52;
+.recipe-card h3 {
+    color: #e5e0d8;
+    margin-top: 0;
+}
+
+.recipe-card li {
+    border-bottom: 1px solid #333;
+    padding: 10px 0;
+}
+
+/* Responsiveness */
+@media (max-width: 600px) {
+    .container { margin: 40px 20px; padding: 25px; }
+    .site-title { font-size: 2.5rem; }
 }

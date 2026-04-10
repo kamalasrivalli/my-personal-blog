@@ -1,9 +1,9 @@
-/* 1. THE BACKGROUND - Fixed for Mobile */
 body {
+    /* Updated to the flower shop photo you sent */
     background-image: url('images/background.jpg'); 
     background-size: cover;
-    background-attachment: scroll; /* Required for phone browsers */
-    background-position: center top;
+    background-attachment: scroll; /* Makes it show up on phones */
+    background-position: center 20%; /* Moves the photo slightly so your face/flowers are seen */
     background-repeat: no-repeat;
     background-color: #f2eee4; 
     color: #333;
@@ -12,97 +12,71 @@ body {
     text-align: center;
 }
 
-/* 2. THE MENU - Fixed for Spacing and Overlap */
+/* FIX: Moves the text down so it doesn't hide your face in the photo */
+.site-title {
+    font-weight: 200; 
+    font-size: 3.2rem;
+    margin-top: 150px; /* Pushes the name down */
+    letter-spacing: 2px;
+    color: #222;
+}
+
+/* FIX: Forces Home and About onto separate lines */
+.menu a {
+    display: block !important; 
+    margin: 15px 0 !important; 
+    text-decoration: none;
+    color: #333;
+    font-family: 'Helvetica', Arial, sans-serif;
+    font-size: 1.2rem;
+    text-align: right;
+}
+
+/* FIX: Ensures the menu icon is visible but not in the way */
 .menu-icon {
     position: fixed;
     top: 20px;
     right: 20px;
-    font-size: 28px;
+    font-size: 30px;
     cursor: pointer;
     z-index: 1001;
-    background-color: rgba(242, 238, 228, 0.9);
+    background-color: rgba(242, 238, 228, 0.7);
     padding: 5px 10px;
     border-radius: 5px;
 }
 
-.menu {
-    display: none;
-    position: fixed;
-    top: 70px;
-    right: 20px;
-    background-color: #f2eee4;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    z-index: 1000;
-    min-width: 130px;
-}
-
-.menu a {
-    display: block !important; /* Forces vertical stack */
-    margin: 12px 0;           /* Space between Home and About */
-    text-decoration: none;
-    color: #333;
-    font-size: 1.1rem;
-    text-align: right;
-}
-
-/* 3. THE OLIVE BLOCK (Home Page) */
+/* KEEPING THE OLIVE BLOCK AND POST IMAGES AS WE DISCUSSED */
 .post-item {
     background-color: #8b8c74; 
     margin: 40px auto;        
-    padding: 25px;            
-    max-width: 400px;         
+    padding: 30px;            
+    max-width: 450px;         
     border-radius: 12px;
 }
 
-/* This is the photo INSIDE the Olive Block */
+/* This is for the photo inside the Olive block */
 .post-item img {
-    width: 100% !important;
-    height: 200px !important; /* Short and neat for the preview */
+    max-height: 250px;
+    width: 100%;
     object-fit: cover;
     border-radius: 8px;
-    margin-bottom: 15px;
 }
 
-/* 4. THE BLOG POST IMAGES (Muffins, etc.) */
-/* IMPORTANT: Use <img class="post-image" ...> in your HTML */
+/* This is for your muffin photos in the post */
 img.post-image {
     display: block;
-    max-width: 700px; 
+    max-width: 650px; 
     width: 95%;
-    height: 350px;     /* Wide and short landscape look */
+    height: 350px;    
     object-fit: cover; 
-    margin: 30px auto; 
-    border-radius: 10px;
+    margin: 35px auto; 
+    border-radius: 8px;
 }
 
-/* 5. GENERAL LAYOUT */
 .container {
-    max-width: 850px;
-    margin: 60px auto;
+    max-width: 900px;
+    margin: 80px auto;
     padding: 40px 20px;
     background-color: rgba(242, 238, 228, 0.9);
     border-radius: 15px;
-}
-
-.site-title {
-    font-weight: 200; 
-    font-size: 3rem;
-    margin-top: 60px;
-    letter-spacing: 2px;
-}
-
-/* 6. PROFILE PIC (About Page) */
-.about-image {
-    width: 220px !important;
-    height: auto !important; /* Keeps it from being squashed */
-    border-radius: 10px;
-}
-
-/* 7. FULL SCREEN POSTS */
-.full-screen-post {
-    background-color: #f2eee4 !important;
-    min-height: 100vh;
-    padding: 60px 10%;
 }

@@ -49,12 +49,13 @@ body {
 }
 
 .menu a {
-    display: block;    /* Puts Home and About on separate lines */
-    color: #333;
+    display: block;      /* This stacks them vertically */
+    margin: 15px 0;      /* This creates the gap between Home and About */
+    color: #333;         
     text-decoration: none;
-    font-size: 1.2rem;
-    margin: 10px 0;
-    font-weight: 300;
+    font-size: 1.4rem;   
+    font-weight: 200;    
+    text-align: right;   
 }
 /* THE POST BLOCK: Muted Dusty Olive */
 .post-item {

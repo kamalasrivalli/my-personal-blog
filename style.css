@@ -1,9 +1,11 @@
 body {
-    /* Added your sky photo here */
+    /* Use your floral background photo */
     background-image: url('images/background.jpg'); 
     background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+    /* 'scroll' is necessary for the image to show up on mobile phones */
+    background-attachment: scroll; 
+    background-position: center top;
+    background-repeat: no-repeat;
     background-color: #f2eee4; 
     color: #333;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -27,7 +29,7 @@ body {
     margin-bottom: 50px;
 }
 
-/* Fixes the hamburger icon position so it doesn't overlap text */
+/* Fixes the hamburger icon position */
 .menu-icon {
     position: fixed;
     top: 20px;
@@ -35,7 +37,7 @@ body {
     font-size: 28px;
     cursor: pointer;
     z-index: 1001;
-    background-color: rgba(242, 238, 228, 0.8); /* Matches your linen color */
+    background-color: rgba(242, 238, 228, 0.8);
     padding: 5px 10px;
     border-radius: 5px;
 }
@@ -55,61 +57,62 @@ body {
     min-width: 120px;
 }
 
-/* FIX: This stops "Home" and "About" from smashing together */
+/* Forces "Home" and "About" onto new lines */
 .menu a {
-    display: block !important; /* Forces them onto new lines */
-    margin: 10px 0;           /* Adds space between the links */
+    display: block !important; 
+    margin: 10px 0;           
     text-decoration: none;
     color: #333;
     font-family: 'Helvetica', Arial, sans-serif;
     font-size: 1.1rem;
 }
 
-/* This controls the Olive Block size */
+/* The Olive Block on the Home Page */
 .post-item {
     background-color: #8b8c74; 
-    margin: 40px auto;        /* Adds space between blocks */
-    padding: 30px;            /* Reduced padding from 60px to 30px */
-    max-width: 450px;         /* Made the block narrower (was 600px) */
+    margin: 40px auto;        
+    padding: 30px;            
+    max-width: 450px;         
     border-radius: 12px;
     text-align: center;
 }
 
-/* This keeps the image inside the block small and neat */
+/* Image inside the Olive Block */
 .post-item img {
-    max-height: 250px;        /* Limits how tall the photo can be */
-    width: 100%;
-    object-fit: cover;        /* Crops the photo nicely to fit the space */
+    max-height: 250px !important; 
+    width: 100% !important;
+    height: auto !important; /* Overrides the landscape rule below */
+    object-fit: cover;
     margin-bottom: 15px;
+    border-radius: 8px;
 }
 
 .post-link {
-    font-size: 1.3rem;        /* Slightly smaller text to match the smaller block */
+    font-size: 1.3rem; 
     font-weight: 300;
     color: #ffffff;
     text-decoration: none;
 }
 
-.post-item:hover {
-    transform: translateY(-3px);
-}
-
-img {
+/* NEW RULE: Only for images inside the blog posts */
+/* To use this, add class="post-image" to your <img> tags in post1.html */
+img.post-image {
     display: block;
-    /* This makes them wider on laptops */
     max-width: 650px; 
     width: 95%;
-    
-    /* This forces a wider, shorter "Landscape" shape */
     height: 350px;     
     object-fit: cover; 
-    object-position: center; /* Ensures the middle of the photo stays visible */
-    
+    object-position: center;
     margin: 35px auto; 
     border-radius: 8px;
 }
 
-/* Container with slight transparency so background shows through edges */
+/* General image reset so background and icons aren't affected */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .container {
     max-width: 900px;
     margin: 80px auto;
@@ -118,29 +121,24 @@ img {
     border-radius: 15px;
 }
 
-.about-container {
-    display: flex;
-    gap: 40px;
-    align-items: flex-start;
-}
-
+/* For your profile photo on About Page */
 .about-image {
-    width: 220px;
+    width: 220px !important;
+    height: auto !important;
+    border-radius: 8px;
 }
-/* --- Add this at the very bottom --- */
 
-/* This hides the cherry blossom photo only on the post page */
+/* Hides background on specific post pages if needed */
 body.white-bg {
     background-image: none !important;
     background-color: #f2eee4 !important;
 }
 
-/* This makes the linen color stretch to the edges of the screen */
 .full-screen-post {
     background-color: #f2eee4 !important;
     min-height: 100vh;
     margin: 0 auto !important;
-    max-width: 100% !important; /* Fills the width */
-    padding: 80px 10% !important; /* Keeps text in the middle with 10% side space */
-    border-radius: 0 !important; /* Removes rounded corners for full-screen look */
+    max-width: 100% !important;
+    padding: 80px 10% !important;
+    border-radius: 0 !important;
 }
